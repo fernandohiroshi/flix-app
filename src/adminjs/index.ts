@@ -5,6 +5,7 @@ import { sequelize } from '../database'
 import { adminJsResources } from './resources'
 import { User } from '../models'
 import bcrypt from 'bcrypt'
+import { locale } from './locale'
 
 AdminJS.registerAdapter(AdminJSSquelize)
 
@@ -12,6 +13,7 @@ export const adminJs = new AdminJS({
   databases: [sequelize],
   rootPath: '/admin',
   resources: adminJsResources,
+  locale: locale,
   branding: {
     companyName: 'Flix App',
     logo: '/logo.png',
