@@ -77,9 +77,9 @@ export const User = sequelize.define<UserInstance, User>(
       },
     },
   }
-)
+);
 
-User.prototype.checkPassword = function (
+(User.prototype as UserInstance).checkPassword = function (
   password: string,
   callbackfn: CheckPasswordCallback
 ) {
