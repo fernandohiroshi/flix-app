@@ -23,6 +23,6 @@ Favorite.belongsTo(User)
 User.belongsToMany(Course, { through: Favorite })
 User.belongsToMany(Course, { through: Like })
 User.belongsToMany(Episode, { through: WatchTime })
-User.hasMany(Favorite, { as: 'FavoritesCourses', foreignKey: 'user_id' })
+User.hasMany(Favorite, { as: 'favorites_courses', foreignKey: 'user_id' })
 
 export { Category, Course, Episode, Favorite, Like, User, WatchTime }
